@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:modelhandling/screen/login_screen.dart';
-import 'package:modelhandling/screen/student_screen.dart';
+import 'package:modelhandling/screen/chart_screen.dart';
+// import 'package:modelhandling/screen/student_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 void main() async {
@@ -21,9 +21,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DEMO PAGE',
-      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: LoginPage(),
+      title: 'FINAL EXAM',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+      ),
+      home: const ChatPage(username: 'David Porque'),
     );
   }
 }

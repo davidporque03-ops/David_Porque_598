@@ -31,6 +31,8 @@ class _LoginPageState extends State<LoginPage> {
 
     setState(() => isLoading = false);
 
+    if (!mounted) return;
+
     if (result['success']) {
       Navigator.pushReplacement(
         context,

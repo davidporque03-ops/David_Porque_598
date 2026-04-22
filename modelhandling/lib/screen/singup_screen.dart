@@ -46,6 +46,9 @@ class _RegisterPageState extends State<RegisterPage> {
     setState(() {
       isLoading = false;
     });
+
+    if (!mounted) return;
+
     showMessage('User registered');
     if (result['success']) {
       Navigator.pop(context);
